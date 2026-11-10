@@ -1,6 +1,6 @@
 {
   "name": "wapliss-whatsapp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Use your own WhatsApp from Gemini CLI through Wapliss: read chats and groups and send messages with your confirmation.",
   "contextFileName": "GEMINI.md",
   "mcpServers": {
