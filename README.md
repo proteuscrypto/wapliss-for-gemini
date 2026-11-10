@@ -204,7 +204,7 @@ the same 16 tools.
 
 | Assistant | Where it works | Format | Get it |
 | --- | --- | --- | --- |
-| Claude | Claude.ai, Claude Desktop, Claude Code | Custom connector / Claude plugin | [wapliss.com/integrations#claude](https://wapliss.com/integrations#claude) |
+| Claude | Claude.ai, Claude Desktop, Claude Code | Custom connector / Claude plugin | [github.com/proteuscrypto/wapliss-whatsapp-for-claude](https://github.com/proteuscrypto/wapliss-whatsapp-for-claude) |
 | ChatGPT | ChatGPT web and desktop | ChatGPT plugin (Agent Plugins) / custom MCP connector | [github.com/proteuscrypto/wapliss-for-chatgpt](https://github.com/proteuscrypto/wapliss-for-chatgpt) |
 | **Gemini** | Gemini app, Gemini CLI, Antigravity | Connected app, Gemini CLI extension, Antigravity plugin | this repository |
 | DeepSeek | DeepSeek Harness (dsh) | dsh bundle | [github.com/proteuscrypto/wapliss-for-deepseek](https://github.com/proteuscrypto/wapliss-for-deepseek) |
