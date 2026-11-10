@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "wapliss": {
+      "serverUrl": "https://wapliss.com/mcp/v1",
+      "timeoutSeconds": 60
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "wapliss-whatsapp",
+  "displayName": "Wapliss WhatsApp",
+  "description": "Use your own WhatsApp from Gemini: read chats and groups, see your latest messages, and send texts, files, locations and polls with your confirmation.",
+  "version": "1.0.0",
+  "logo": "assets/logo.png",
+  "suggestedPrompts": [
+    "Show me my latest WhatsApp messages",
+    "Summarize today's messages in my family group on WhatsApp",
+    "Send 'On my way, 10 minutes' to +1 555 010 2030 on WhatsApp"
+  ],
+  "author": {
+    "name": "Wapliss",
+    "url": "https://wapliss.com/"
+  },
+  "homepage": "https://wapliss.com/",
+  "repository": "https://github.com/proteuscrypto/wapliss-for-gemini",
+  "license": "MIT",
+  "keywords": ["whatsapp", "wapliss", "messaging", "chats", "groups", "mcp"]
+}

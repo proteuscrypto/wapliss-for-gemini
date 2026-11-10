@@ -1,0 +1,100 @@
+{
+  "_comment": "Values to enter in Google Connected Console (Create app). Not read by any tool; kept here as the single source of truth for the Gemini listing.",
+  "app": {
+    "name": "Wapliss",
+    "category": "Communication",
+    "connection_type": "MCP server",
+    "icon": "../assets/logo.png",
+    "description": "Read and send messages from your own WhatsApp in Gemini: chats, groups and latest messages, with your confirmation before anything is sent.",
+    "capabilities": [
+      "Find and read your WhatsApp chats and groups",
+      "Summarize who said what in a group",
+      "Show your latest received and sent messages",
+      "Show group members and admins",
+      "Send texts, images, documents, audio, video, locations, contact cards and polls",
+      "Forward messages to another chat"
+    ],
+    "example_prompts": [
+      "@Wapliss show me my latest WhatsApp messages",
+      "@Wapliss what did people say in my family group today?",
+      "Send 'On my way, 10 minutes' to +1 555 010 2030 with Wapliss"
+    ],
+    "translations": {
+      "es-419": {
+        "description": "Lee y envía mensajes desde tu propio WhatsApp en Gemini: chats, grupos y últimos mensajes, con tu confirmación antes de enviar.",
+        "capabilities": [
+          "Buscar y leer tus chats y grupos de WhatsApp",
+          "Resumir quién dijo qué en un grupo",
+          "Ver tus últimos mensajes recibidos y enviados",
+          "Ver participantes y administradores de un grupo",
+          "Enviar textos, imágenes, documentos, audio, video, ubicaciones, contactos y encuestas",
+          "Reenviar mensajes a otro chat"
+        ],
+        "example_prompts": [
+          "@Wapliss mostrame mis últimos mensajes de WhatsApp",
+          "@Wapliss ¿qué se dijo hoy en mi grupo de la familia?",
+          "Mandá 'Llego en 10 minutos' a +54 9 11 5555 0100 con Wapliss"
+        ]
+      }
+    },
+    "terms_of_service_url": "https://wapliss.com/terms-of-service",
+    "privacy_policy_url": "https://wapliss.com/privacy-policy",
+    "website_url": "https://wapliss.com/"
+  },
+  "endpoint": {
+    "mcp_url": "https://wapliss.com/mcp/v1",
+    "domain_verification_path": "/.well-known/google-connected-apps",
+    "transport": "Streamable HTTP (POST, application/json)",
+    "protocol_versions": ["2025-11-25", "2025-06-18", "2025-03-26"]
+  },
+  "access_credentials": {
+    "type": "User-delegated (Authorization Code)",
+    "client_registration": "Dynamic Client Registration",
+    "authorization_server_metadata": "https://wapliss.com/.well-known/oauth-authorization-server",
+    "protected_resource_metadata": "https://wapliss.com/.well-known/oauth-protected-resource/mcp/v1",
+    "scopes": ["wapliss:mcp", "whatsapp:read", "whatsapp:write"],
+    "pkce": "S256",
+    "refresh_tokens": "Not rotated for Google redirect URIs (Persistent Linking); 30-day sliding expiry",
+    "revocation_endpoint": "https://wapliss.com/oauth/revoke",
+    "google_redirect_uris": [
+      "https://oauth-redirect.googleusercontent.com/r/*",
+      "https://oauth-redirect-sandbox.googleusercontent.com/r/*",
+      "https://oauth-redirect-test.googleusercontent.com/r/*",
+      "https://oauth-redirect.googleusercontent.com/a/*",
+      "https://oauth-redirect-sandbox.googleusercontent.com/a/*",
+      "https://oauth-redirect-test.googleusercontent.com/a/*"
+    ]
+  },
+  "test_account": {
+    "login_url": "https://wapliss.com",
+    "credentials": "Entered by the owner in the console. Use a dedicated demo account (email and password, no 2FA), never a personal one.",
+    "seed_data": "Demo WhatsApp number permanently linked, with the individual chat 'Demo Contact' and the group 'Demo Group' (3 participants, recent messages).",
+    "instructions": [
+      "Invoke @Wapliss and choose Connect.",
+      "Sign in at wapliss.com with the demo email and password (not Google).",
+      "On the consent screen, click Authorize.",
+      "Try: '@Wapliss show me my 5 most recent WhatsApp chats', '@Wapliss summarize Demo Group', '@Wapliss send \"Test\" to Demo Contact' (confirm when asked).",
+      "Send test messages only to Demo Contact."
+    ]
+  },
+  "availability": {
+    "countries": "All supported countries",
+    "languages": ["en", "es"],
+    "google_products": ["Gemini app"],
+    "context_signals": []
+  },
+  "tool_settings": {
+    "require_user_confirmation": [
+      "send_text_message",
+      "send_image",
+      "send_document",
+      "send_audio",
+      "send_video",
+      "send_location",
+      "send_contact",
+      "send_poll",
+      "forward_messages"
+    ],
+    "enabled": "all 16 tools"
+  }
+}
